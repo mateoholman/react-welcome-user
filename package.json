@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:mateoholman/react-welcome-user.git",
   "author": "Matthew Holman <mateoholman@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.0.0"
+  }
 }
