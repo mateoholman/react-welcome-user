@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, render } from 'enzyme';
-import Welcome from './index';
+import Welcome from './src/index';
 
 describe('Welcome', () => {
   describe('when rendered', () => {
