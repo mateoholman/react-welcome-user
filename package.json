@@ -29,6 +29,7 @@
     "setupTestFrameworkScriptFile": "./enzymeSetup.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack"
   }
 }
