@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, render } from 'enzyme';
 import Welcome from './src/index';
-import Welcome as WelcomeDist from './dist/index';
+import WelcomeDist from './dist/index';
 
 describe('Welcome', () => {
   describe('when rendered', () => {
@@ -32,7 +32,9 @@ describe('WelcomeDist', () => {
     });
 
     it('should render "Welcome Matt!" when "Matt" is passed as a user prop', () => {
-      expect(render(<WelcomeDist user={'Matt'} />).text()).toBe('Welcome Matt!');
+      expect(render(<WelcomeDist user={'Matt'} />).text()).toBe(
+        'Welcome Matt!'
+      );
     });
   });
 });
