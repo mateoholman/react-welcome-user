@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Welcome(props) {
+const Welcome = props => {
   return <h1>Welcome {props.user}!</h1>;
-}
+};
 
 Welcome.propTypes = {
   user: PropTypes.string.isRequired
