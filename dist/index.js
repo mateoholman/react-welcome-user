@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["Welcome"] = factory();
+	else
+		root["Welcome"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -662,12 +672,12 @@ var Welcome = function Welcome(props) {
   );
 };
 
-Welcome.propTypes = {
-  user: _propTypes2.default.string.isRequired
-};
-
 Welcome.defaultProps = {
   user: 'User'
+};
+
+Welcome.propTypes = {
+  user: _propTypes2.default.string.isRequired
 };
 
 exports.default = Welcome;
@@ -3075,3 +3085,4 @@ module.exports = function() {
 
 /***/ })
 /******/ ]);
+});

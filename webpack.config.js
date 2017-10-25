@@ -1,13 +1,28 @@
+const webpack = require('webpack');
 const path = require('path');
+
+const BUILD_DIR = path.resolve(__dirname, 'dist');
+const APP_DIR = path.resolve(__dirname, 'src');
+
 module.exports = {
-  entry: './src/index.js',
+  entry: APP_DIR + '/index.js',
   output: {
-    path: path.resolve('dist'),
-    filename: 'index.js'
+    path: BUILD_DIR,
+    filename: 'index.js',
+    libraryTarget: 'umd',
+    library: 'Welcome'
   },
   module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
+    rules: [
+      {
+        loader: 'babel-loader',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        include: APP_DIR,
+        options: {
+          presets: ['env', 'react']
+        }
+      }
     ]
   }
 };
